@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var farmer1 = [{
+                name: "Omer",
+                farm: "f1",
+                loc: {
+                    lat: 15,
+                    lon: 32
+                }
+            },
+
+        ];
+        var parteners1 = [{
+                name: 'p1',
+                percent: 20
+            },
+            {
+                name: 'p2',
+                percent: 20
+            },
+            {
+                name: 'p3',
+                percent: 20
+            },
+
+
+        ];
+
+        var farmer2 = [{
+            name: "ahmed",
+            farm: 'f2',
+            loc: {
+                lat: 16,
+                lon: 31,
+            }
+        }];
+        var parteners2 = [{
+            name: 'p1',
+            percent: 30
+        }, {
+            name: 'p2',
+            percent: 40,
+        }];
+
+        //Omer's Farm:
+        console.log(farmer1[0].name);
+        //Omer's Farm Latitude:
+        console.log(farmer1[0].loc.lat);
+        //Ahmeds first partener name:
+        console.log(parteners2[0].name);
+        //Omer's Parteners names:
+        console.log("Omer's first Partener: " + parteners1[0].name + " \n Omer's second Partener: " + parteners1[1]
+            .name +
+            " \n Omer' third Partener: " + parteners1[2].name);
+        //Number of Omer's parteners:
+        console.log(parteners1.length);
+        //10% to ahmed's second partener:
+        console.log(parteners2[1].percent += 10);
+
+        //add a partener of 10% to Omer:
+        const newPart = {
+            name: 'p4',
+            percent: 10
+        };
+        parteners1.push(newPart);
+        console.log("New Partener is: " + parteners1[3].name + " Percentage: " + parteners1[3].percent);
+        //Or 
+        console.log("New Partener is: " + parteners1[[parteners1.length - 1]].name + " Percentage:" + parteners1[[
+            parteners1.length - 1
+        ]].percent);
+
+        //Find percentages of Omer's farm using for loop (total percentage):
+
+        var omersTotalPercentage = 0;
+        for (let item in parteners1) {
+            omersTotalPercentage += parteners1[item].percent;
+        }
+        console.log(omersTotalPercentage);
+
+        //Check if there is Ali's partener insdie Omer's farm:
+        for (let item in parteners1) {
+            if (parteners1[item].name == "ali") {
+                console.log("Partenr Ali is exists");
+                break;
+            } else
+                console.log('Partenr Ali is NOT exists')
+        }
+    </script>
+</body>
+
+</html>
