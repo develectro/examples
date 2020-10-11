@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //Normal object
+        var student = {
+            name: "Ali",
+            job: "programing",
+            language: "javascript",
+            address: "khartoum",
+        }
+        //undefined
+        console.log(student.age);
+
+        //Array of Objects
+        var teacher = [
+
+            {
+                name: "my teacher",
+                subject: "Software Development",
+            },
+
+            {
+                adress: "Kahrtoum",
+                salary: 20000,
+            }
+
+        ];
+
+        //Add 100 to the teacher's salary
+        let x = teacher[1].salary += 100
+        console.log(x);
+
+        //for loop to find student language:
+        for (let item in student) {
+            if (item == "python") {
+                console.log(true);
+            } else {
+                console.log('student is not learning python');
+                break;
+            }
+        }
+    </script>
+</body>
+
+</html>
